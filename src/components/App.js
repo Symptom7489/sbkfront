@@ -1,13 +1,19 @@
 import './App.css';
-import Heading from "./Heading"
+import Header from "./Header"
 import Footer from "./Footer"
-import Storybook from "./Storybook";
+import Carousel, { CarouselItem } from "./Storybook";
 
 function App() {
   return (
       <div>
-        <Heading />
-          <Storybook />
+        <Header />
+          <div className="App">
+              <Carousel>
+                  <CarouselItem> Item 1</CarouselItem>
+                  <CarouselItem> Item 2</CarouselItem>
+                  <CarouselItem> Item 31</CarouselItem>
+              </Carousel>
+          </div>
         <Footer />
       </div>
 
