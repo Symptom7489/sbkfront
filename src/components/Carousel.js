@@ -13,7 +13,7 @@ export const CarouselItem = ({ children, width}) => {
 
 //////////////////// Carousel Body with Buttons and Index  -- useEffects included //////////////////////
 
-const Carousel = ({children}) => {
+const CarouselControls = ({children}) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [ paused, setPaused] = useState(false);
 
@@ -102,5 +102,23 @@ const handlers = useSwipeable({
             </div>
         );
 };
+
+
+function Carousel() {
+  return (
+      <div>
+           <div className="App">
+              <CarouselControls>
+                  <CarouselItem> Item 1</CarouselItem>
+                  <CarouselItem> Item 2</CarouselItem>
+                  <CarouselItem> Item 3</CarouselItem>
+              </CarouselControls>
+          </div>
+         </div>
+
+
+  );
+}
+
 
 export default Carousel;
